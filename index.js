@@ -24,7 +24,7 @@ app.use('/product', ProductRouter);
 app.use('/order', OderRouter);
 
 app.get('/', (req, res) => {
-    res.send('Hello World');
+    res.send('Hello World from cicd');
 });  
 
 app.post('/test', (req, res) => {
