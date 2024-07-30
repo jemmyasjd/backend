@@ -8,7 +8,7 @@ const OderRouter = require('./routes/order');
 
 
 const app = express();
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 4000;
 
 // console.log(port);
 
@@ -36,5 +36,5 @@ app.post('/test', (req, res) => {
 
 
 app.listen(port, () => {
-    console.log('Server running on port 5000');
+    console.log('Server running on port 4000');
 });

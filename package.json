@@ -1,4 +1,7 @@
 {
+  "scripts": {
+    "start": "node index.js"
+  },
   "dependencies": {
     "@clerk/clerk-js": "^5.7.2",
     "@clerk/clerk-sdk-node": "^5.0.12",
