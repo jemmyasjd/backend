@@ -3,6 +3,9 @@ const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 
 async function Payment(req,res){
     try {
+        const host = req.get('host'); // Get the host from the request
+        const protocol = req.protocol; // Get the protocol (http or https)
+      
         const { totalAmount, email } = req.body;
     
         if (!totalAmount) {
@@ -28,8 +31,8 @@ async function Payment(req,res){
             }
           ],
           mode: 'payment',
-          success_url: `${window.location.origin}/`,
-          cancel_url: `${window.location.origin}/`,
+          success_url: `${protocol}://${host}/`,  // Redirect to homepage
+          cancel_url: `${protocol}://${host}/`, 
           customer_email: email,
         });
     
